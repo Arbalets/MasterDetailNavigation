@@ -23,13 +23,15 @@ namespace MasterDetailNavigation
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("MyMasterDetailPage/NavigationPage/MainPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<MyMasterDetailPage, MyMasterDetailPageViewModel>();
+            containerRegistry.RegisterForNavigation<ChildPage, ChildPageViewModel>();
         }
     }
 }

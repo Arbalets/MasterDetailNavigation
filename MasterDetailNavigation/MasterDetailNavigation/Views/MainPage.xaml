@@ -5,7 +5,8 @@
              Title="{Binding Title}">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Label Text="{Binding Status}" />
+        <Button Text="Navigate To Child Page" Command="{Binding NavigateToChildCommand}" />
     </StackLayout>
 
 </ContentPage>
